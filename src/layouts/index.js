@@ -89,9 +89,9 @@ class BasicLayout extends PureComponent {
       <StickyContainer>
         <Sticky topOffset={1}>
           {({ style, isSticky }) => (
-            <header style={{...style}}>
+            <header className={classNames({ [styles.isSticky]: isSticky })} style={{...style}}>
               <div className={styles.logo}></div>
-              <nav className={classNames({ [styles.isSticky]: isSticky })}>
+              <nav>
                 <ul className={styles.nav}>
                   {navList.map((x, i) => <NavItem key={i} {...x} />)}
                 </ul>
@@ -100,6 +100,10 @@ class BasicLayout extends PureComponent {
           )}
         </Sticky>
         <article>{children}</article>
+        <footer>
+          <div className={styles.copy}>&copy; 2018 - 酥趣 - 版权所有</div>
+          <div>京公安网安备 11010502008968 京 ICP 备 10214630</div>
+        </footer>
       </StickyContainer>
     )
   }

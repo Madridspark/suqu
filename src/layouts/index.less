@@ -1,5 +1,64 @@
+@import '../index.less';
+@header-height: 120px;
 
-.isSticky {
-  background: rgb(150, 121, 89);
-  transition: background-color .3s;
+header {
+  position: relative;
+  z-index: 999;
+  nav {
+    ul {
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      li.navItem {
+        display: inline;
+        list-style: none;
+        line-height: @header-height;
+        font-size: 18px;
+        a {
+          margin: 1em;
+          text-decoration: none;
+          color: #fff9;
+          transition: color .3s;
+          &:hover {
+            color: #ffff;
+          }
+        }
+        ul.subNav {
+          display: none;
+        }
+      }
+    }
+  }
+  &.isSticky {
+    background: @primay-color;
+    transition: background-color .3s;
+    nav {
+      li.navItem {
+        a {
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+article {
+  position: relative;
+  z-index: 0;
+  margin-top: -@header-height;
+}
+
+footer {
+  color: #fff;
+  background: @primay-color;
+  text-align: center;
+  font-size: 16px;
+  font-weight: lighter;
+  letter-spacing: .1em;
+  line-height: 40px;
+  padding: 40px;
+  .copy {
+    font-size: 20px;
+    letter-spacing: .3em;
+  }
 }
