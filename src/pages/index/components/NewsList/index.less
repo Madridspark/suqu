@@ -1,0 +1,47 @@
+@import '~@/index.less';
+
+ul.list {
+  padding: 0;
+  li.item {
+    display: block;
+    list-style: none;
+    padding-right: 2px;
+    a {
+      text-decoration: none;
+      color: #000;
+      div {
+        float: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        transition: all .3s;
+        border-bottom: 1px solid #f0f0f0;
+        &.title {
+          width: 70%;
+          letter-spacing: .3em;
+          text-indent: .5em;
+        }
+        &.time {
+          width: 20%;
+          color: @primary-color;
+        }
+        &.author {
+          width: 10%;
+          color: @primary-color;
+        }
+      }
+      &::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+      &:hover div {
+        color: #fff;
+        background-color: @primary-color;
+      }
+    }
+    &:last-child a div {
+      border-bottom: none;
+    }
+  }
+}

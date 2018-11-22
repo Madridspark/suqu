@@ -1,11 +1,10 @@
+import { resolve } from 'path';
 
-// ref: https://umijs.org/config/
 export default {
   plugins: [
-    // ref: https://umijs.org/plugin/umi-plugin-react.html
     ['umi-plugin-react', {
       antd: false,
-      dva: false,
+      dva: true,
       dynamicImport: false,
       title: 'suqu',
       dll: false,
@@ -15,4 +14,7 @@ export default {
       hardSource: false,
     }],
   ],
+  alias: {
+    '@': resolve('src'),
+  },
 }

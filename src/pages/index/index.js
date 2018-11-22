@@ -1,8 +1,10 @@
 import React, { PureComponent } from 'react';
+import { connect } from 'dva';
 import BannerAnim, { Element, Thumb } from 'rc-banner-anim';
 import TweenOne from 'rc-tween-one';
 import classNames from 'classnames';
 import 'rc-banner-anim/assets/index.css';
+import NewsList from './components/NewsList';
 import styles from './index.less';
 
 const BgElement = Element.BgElement;
@@ -18,8 +20,12 @@ const Section = ({ title, children, gray, fullScreen = false }) => (
   </section>
 )
 
+@connect(({ model }) => ({ data: model }))
 class IndexPage extends PureComponent {
   render() {
+    const { data: {
+      news = [],
+    } } = this.props;
     return (
       <div>
         <Section fullScreen>
@@ -97,13 +103,7 @@ class IndexPage extends PureComponent {
           <br />
         </Section>
         <Section title='酥趣资讯'>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
+          <NewsList>{news}</NewsList>
         </Section>
         <Section title='合作单位' gray>
           <br />

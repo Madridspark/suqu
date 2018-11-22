@@ -67,7 +67,7 @@ const NavItem = ({ title, link, children }) => {
     className: styles.navItem,
   }
   return (
-    <li className={styles.navItem}>
+    <li {...props}>
       <Link to={link}>{title}</Link>
       {children && children.length > 0 && (
         <ul className={styles.subNav}>
@@ -83,6 +83,12 @@ const NavItem = ({ title, link, children }) => {
 }
 
 class BasicLayout extends PureComponent {
+  componentDidUpdate(prevProps) {
+    if (this.props.location !== prevProps.location) {
+      window.scrollTo(0, 0);
+    }
+  }
+
   render() {
     const { children } = this.props;
     return (
