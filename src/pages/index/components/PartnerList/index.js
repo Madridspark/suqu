@@ -6,10 +6,10 @@ import styles from './index.less';
 
 const itemHeight = 90;
 
-class NewsList extends PureComponent {
+class PartnerList extends PureComponent {
   render() {
     const { children } = this.props;
-    const items = children.map(({ title, link, time, author }, i) => (
+    const items = children.map(({ title, link, image }, i) => (
       <li className={styles.item} key={i}>
         <a
           style={{ lineHeight: `${itemHeight}px`, height: itemHeight}}
@@ -17,9 +17,7 @@ class NewsList extends PureComponent {
           target='_blank'
           rel='noopener noreferrer'
         >
-          <div className={styles.title}>{title}</div>
-          <div className={styles.time}>{moment(time).format('DD MMMM YYYY')}</div>
-          <div className={styles.author}>by {author}</div>
+          <img alt={title} src={image} />
         </a>
       </li>
     ));
@@ -27,6 +25,7 @@ class NewsList extends PureComponent {
       <OverPack always={false}>
         <QueueAnim
           className={styles.list}
+          type='scaleBig'
           component='ul'
           duration={700}
           interval={200}
@@ -39,4 +38,4 @@ class NewsList extends PureComponent {
   }
 }
 
-export default NewsList;
+export default PartnerList;
