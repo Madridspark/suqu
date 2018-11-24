@@ -108,7 +108,7 @@ class BasicLayout extends PureComponent {
         <article>{children}</article>
         <footer>
           <div className={styles.copy}>&copy; 2018 - 酥趣 - 版权所有</div>
-          <div>京公安网安备 11010502008968 京 ICP 备 10214630</div>
+          <div>北京公安网安备 11010502008968 京 ICP 备 10214630</div>
         </footer>
       </StickyContainer>
     )
