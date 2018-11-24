@@ -5,6 +5,7 @@ import TweenOne from 'rc-tween-one';
 import classNames from 'classnames';
 import 'rc-banner-anim/assets/index.css';
 import NewsList from './components/NewsList';
+import PartnerList from './components/PartnerList';
 import styles from './index.less';
 
 const BgElement = Element.BgElement;
@@ -106,13 +107,7 @@ class IndexPage extends PureComponent {
           <NewsList>{news}</NewsList>
         </Section>
         <Section title='合作单位' gray>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
+          <PartnerList>{news}</PartnerList>
         </Section>
         <Section title='联系我们'>
           <div>

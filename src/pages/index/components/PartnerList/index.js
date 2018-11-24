@@ -24,6 +24,7 @@ class PartnerList extends PureComponent {
       <OverPack always={false}>
         <QueueAnim
           className={styles.list}
+          type='scaleBig'
           component='ul'
           duration={700}
           interval={200}

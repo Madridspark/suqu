@@ -3,53 +3,12 @@
 ul.list {
   padding: 0;
   li.item {
-    display: block;
+    display: inline-block;
     list-style: none;
-    padding-right: 2px;
+    width: 25%;
+    background-color: @primary-color;
     a {
       text-decoration: none;
-      color: #000;
-      div {
-        float: left;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        transition: all .3s;
-        border-bottom: 1px solid #f0f0f0;
-        &.title {
-          width: 70%;
-          letter-spacing: .3em;
-          text-indent: .5em;
-        }
-        &.time {
-          width: 20%;
-          color: #a3a3a3;
-        }
-        &.author {
-          width: 10%;
-          color: @primary-color;
-          &::before {
-            content: 'by ';
-            color: #a3a3a3;
-            transition: color .3s;
-          }
-        }
-      }
-      &::after {
-        content: '';
-        display: block;
-        clear: both;
-      }
-      &:hover div {
-        color: #fff;
-        background-color: @primary-color;
-        &.author::before {
-          color: #fff;
-        }
-      }
-    }
-    &:last-child a div {
-      border-bottom: none;
     }
   }
 }
