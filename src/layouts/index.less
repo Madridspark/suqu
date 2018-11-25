@@ -4,23 +4,36 @@
 header {
   position: relative;
   z-index: 999;
+  text-align: center;
   nav {
+    max-width: 1024px;
+    margin: 0 auto;
+    text-align: right;
+    a.logo {
+      height: @header-height;
+      float: left;
+      img {
+        padding-top: 10px;
+        height: @header-height - 20px;
+        user-select: none;
+      }
+    }
     ul {
       padding: 0;
       margin: 0;
-      text-align: center;
+      padding-right: 3em;
       li.navItem {
         display: inline;
         list-style: none;
         line-height: @header-height;
         font-size: 18px;
         a {
-          margin: 1em;
+          margin: 1.5em;
           text-decoration: none;
-          color: #fff9;
+          color: #fff;
           transition: color .3s;
           &:hover {
-            color: #ffff;
+            color: rgba(255, 255, 255, .6);
           }
         }
         ul.subNav {

@@ -3,6 +3,7 @@ import { StickyContainer, Sticky } from 'react-sticky';
 import NavLink from 'umi/navlink'
 import Link from 'umi/link';
 import classNames from 'classnames';
+import logo from '@/assets/logo.png';
 import styles from './index.less';
 
 const navList = [
@@ -96,8 +97,10 @@ class BasicLayout extends PureComponent {
         <Sticky topOffset={1}>
           {({ style, isSticky }) => (
             <header className={classNames({ [styles.isSticky]: isSticky })} style={{...style}}>
-              <div className={styles.logo}></div>
               <nav>
+                <Link to='/' className={styles.logo}>
+                  <img alt='logo' src={logo} />
+                </Link>
                 <ul className={styles.nav}>
                   {navList.map((x, i) => <NavItem key={i} {...x} />)}
                 </ul>

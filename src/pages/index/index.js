@@ -4,6 +4,7 @@ import BannerAnim, { Element, Thumb } from 'rc-banner-anim';
 import TweenOne from 'rc-tween-one';
 import classNames from 'classnames';
 import 'rc-banner-anim/assets/index.css';
+import CourseList from './components/CourseList';
 import NewsList from './components/NewsList';
 import PartnerList from './components/PartnerList';
 import styles from './index.less';
@@ -25,7 +26,9 @@ const Section = ({ title, children, gray, fullScreen = false }) => (
 class IndexPage extends PureComponent {
   render() {
     const { data: {
+      courses = [],
       news = [],
+      partners = [],
     } } = this.props;
     return (
       <div>
@@ -77,13 +80,7 @@ class IndexPage extends PureComponent {
           </BannerAnim>
         </Section>
         <Section title='酥趣课程' gray>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
+          <CourseList>{courses}</CourseList>
         </Section>
         <Section title='酥趣名师'>
           <br />
@@ -107,7 +104,7 @@ class IndexPage extends PureComponent {
           <NewsList>{news}</NewsList>
         </Section>
         <Section title='合作单位' gray>
-          <PartnerList>{news}</PartnerList>
+          <PartnerList>{partners}</PartnerList>
         </Section>
         <Section title='联系我们'>
           <div>
