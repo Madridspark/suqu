@@ -1,0 +1,62 @@
+@import '~@/index.less';
+@thumbDotHeight: 6px;
+
+.banner {
+  height: 768px;
+  .elem {
+    text-align: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    .bg {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .link {
+      position: relative;
+      height: 100%;
+      background-color: rgba(0, 0, 0, .3);
+      a {
+        display: block;
+        position: relative;
+        height: 100%;
+        color: #fff;
+        text-decoration: none;
+        .title{
+          position: relative;
+          font-size: 32px;
+          top: 40%;
+        }
+        .description{
+          position: relative;
+          top: 40%;
+        }
+      }
+    }
+  }
+  .thumb {
+    padding: 10px 0;
+    .thumbChild {
+      display: inline-block;
+      margin: @thumbDotHeight * 2;
+      width: @thumbDotHeight * 8;
+      height: @thumbDotHeight;
+      border-radius: @thumbDotHeight / 2;
+      background-color: rgba(255, 255, 255, .3);
+      transition: background-color .3s;
+      &:global(.active) {
+        background-color: rgba(235, 154, 63);
+      }
+    }
+  }
+}
+
+
+

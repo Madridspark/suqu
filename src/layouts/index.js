@@ -26,8 +26,8 @@ const navList = [
     link: '/',
   },
   {
-    title: '酥趣咨询',
-    link: '/',
+    title: '酥趣资讯',
+    link: '/news',
   },
   {
     title: '食谱',
@@ -91,12 +91,13 @@ class BasicLayout extends PureComponent {
   }
 
   render() {
-    const { children } = this.props;
+    const { children, location: { pathname } } = this.props;
+    const isIndex = pathname === '/';
     return (
       <StickyContainer>
         <Sticky topOffset={1}>
           {({ style, isSticky }) => (
-            <header className={classNames({ [styles.isSticky]: isSticky })} style={{...style}}>
+            <header className={classNames({ [styles.isSticky]: isSticky || !isIndex })} style={{...style}}>
               <nav>
                 <Link to='/' className={styles.logo}>
                   <img alt='logo' src={logo} />
@@ -108,7 +109,7 @@ class BasicLayout extends PureComponent {
             </header>
           )}
         </Sticky>
-        <article>{children}</article>
+        <article className={classNames({[styles.subPage]: !isIndex})}>{children}</article>
         <footer>
           <div className={styles.copy}>&copy; 2018 - 酥趣 - 版权所有</div>
           <div>北京公安网安备 11010502008968 京 ICP 备 10214630</div>

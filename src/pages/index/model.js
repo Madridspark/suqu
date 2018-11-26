@@ -1,5 +1,21 @@
 export default {
   state: {
+    heros: [{
+      image: 'https://zos.alipayobjects.com/rmsportal/hzPBTkqtFpLlWCi.jpg',
+      title: 'Ant Motion Banner',
+      description: 'The Fast Way Use Animation In React',
+      link: 'https://baidu.com',
+    }, {
+      image: 'https://zos.alipayobjects.com/rmsportal/gGlUMYGEIvjDOOw.jpg',
+      title: 'Ant Motion Banner',
+      description: 'The Fast Way Use Animation In React',
+      link: 'https://baidu.com',
+    }],
+    works: [
+      'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+      'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+      'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+    ],
     courses: [{
       title: '松饼',
       link: 'https://baidu.com',
