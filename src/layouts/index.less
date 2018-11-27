@@ -18,17 +18,19 @@ header {
         user-select: none;
       }
     }
-    ul {
+    ul.nav {
       padding: 0;
       margin: 0;
       padding-right: 3em;
       li.navItem {
-        display: inline;
+        display: inline-block;
+        position: relative;
+        width: 6em;
+        text-align: center;
         list-style: none;
         line-height: @header-height;
         font-size: 18px;
-        a {
-          margin: 1.5em;
+        & > a {
           text-decoration: none;
           color: #fff;
           transition: color .3s;
@@ -37,7 +39,46 @@ header {
           }
         }
         ul.subNav {
-          display: none;
+          position: absolute;
+          line-height: 1;
+          padding: 10px 0;
+          margin-top: 17px;
+          top: 70px;
+          left: 50%;
+          margin-left: -50%;
+          width: 6em;
+          background: @primary-color-tranparent;
+          transform: scaleY(0);
+          transform-origin: 0 0 0;
+          transition: all .3s;
+          &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            margin-top: -27px;
+            left: 3em;
+            margin-left: -7px;
+            width: 0;
+            height: 0;
+            border: 7px solid transparent;
+            border-bottom: 10px solid @primary-color-tranparent;
+          }
+          li {
+            list-style: none;
+            text-align: center;
+            a {
+              color: #fff;
+              transition: color .3s;
+              text-decoration: none;
+              line-height: 2.5;
+              &:hover {
+                color: #000;
+              }
+            }
+          }
+        }
+        &:hover ul.subNav {
+          transform: scaleY(1);
         }
       }
     }
@@ -45,10 +86,17 @@ header {
   &.isSticky {
     background: @primary-color;
     transition: background-color .3s;
-    nav {
+    nav ul.nav {
       li.navItem {
-        a {
+        & > a {
           color: #000;
+        }
+        ul.subNav {
+          background: @primary-color;
+          box-shadow: 0 3px 20px rgba(0, 0, 0, .30);
+          &::before {
+            border-bottom: 10px solid @primary-color;
+          }
         }
       }
     }
