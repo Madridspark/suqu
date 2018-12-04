@@ -2,10 +2,13 @@ import React, { PureComponent } from 'react';
 import { connect } from 'dva';
 import classNames from 'classnames';
 import Banner from './components/Banner';
+import TeacherList from './components/TeacherList';
+import WorkList from './components/WorkList';
 import CourseList from './components/CourseList';
 import NewsList from './components/NewsList';
 import PartnerList from './components/PartnerList';
 import styles from './index.less';
+import 'element-theme-default';
 
 const Section = ({ title, children, gray, fullScreen = false }) => (
   <section className={classNames({
@@ -37,22 +40,10 @@ class IndexPage extends PureComponent {
           <CourseList>{courses}</CourseList>
         </Section>
         <Section title='酥趣名师'>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
+          <TeacherList>{news}</TeacherList>
         </Section>
         <Section title='学员作品' gray>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
+          <WorkList>{news}</WorkList>
         </Section>
         <Section title='酥趣资讯'>
           <NewsList>{news}</NewsList>

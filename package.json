@@ -30,6 +30,8 @@
     "node": ">=8.0.0"
   },
   "dependencies": {
+    "element-react": "^1.4.24",
+    "element-theme-default": "^1.4.13",
     "moment": "^2.22.2",
     "rc-banner-anim": "^2.1.2",
     "rc-queue-anim": "^1.6.7",
