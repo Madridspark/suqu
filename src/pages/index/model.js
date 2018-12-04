@@ -11,10 +11,35 @@ export default {
       description: 'The Fast Way Use Animation In React',
       link: 'https://baidu.com',
     }],
+    teachers: [{
+      name: '江小白',
+      photo: 'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png'
+    }, {
+      name: '江小白',
+      photo: 'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png'
+    }, {
+      name: '江小白',
+      photo: 'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png'
+    }, {
+      name: '江小白',
+      photo: 'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png'
+    }, {
+      name: '江小白',
+      photo: 'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png'
+    }, {
+      name: '江小白',
+      photo: 'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png'
+    }, {
+      name: '江小白',
+      photo: 'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png'
+    }, {
+      name: '江小白',
+      photo: 'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png'
+    }],
     works: [
-      'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
-      'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
-      'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+      'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png',
+      'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png',
+      'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png',
     ],
     courses: [{
       title: '松饼',
