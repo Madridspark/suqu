@@ -2,13 +2,18 @@
 @bgColor: rgba(0, 0, 0, .6);
 
 ul.list {
-  padding: 0;
+  margin: 0;
+  padding: 20px 0;
   li.item {
     display: inline-block;
     list-style: none;
-    width: 25%;
-    padding: 1em;
-    box-sizing: border-box;
+    width: 23.5%;
+    padding: 1em 0;
+    padding-right: 2%;
+    box-sizing: content-box;
+    &:nth-child(4n+0) {
+      padding-right: 0;
+    }
     a {
       background-color: @primary-color;
       display: block;
@@ -16,6 +21,7 @@ ul.list {
       text-decoration: none;
       overflow: hidden;
       border-radius: 7px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.15);
       font-weight: lighter;
       div.content {
         position: absolute;

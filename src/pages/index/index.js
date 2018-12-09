@@ -27,8 +27,9 @@ class IndexPage extends PureComponent {
   render() {
     const { data: {
       heros = [],
-      teachers = [],
       courses = [],
+      teachers = [],
+      works = [],
       news = [],
       partners = [],
     } } = this.props;
@@ -44,7 +45,7 @@ class IndexPage extends PureComponent {
           <TeacherList>{teachers}</TeacherList>
         </Section>
         <Section title='学员作品' gray>
-          <WorkList>{news}</WorkList>
+          <WorkList>{works}</WorkList>
         </Section>
         <Section title='酥趣资讯'>
           <NewsList>{news}</NewsList>

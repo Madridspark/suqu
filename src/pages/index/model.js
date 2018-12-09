@@ -12,34 +12,42 @@ export default {
       link: 'https://baidu.com',
     }],
     teachers: [{
-      name: '江小白',
+      name: '张小白',
+      name_en: 'Zhang Xiao Bai',
       photo: 'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png'
     }, {
-      name: '江小白',
+      name: '张小白',
+      name_en: 'Zhang Xiao Bai',
       photo: 'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png'
     }, {
-      name: '江小白',
+      name: '张小白',
+      name_en: 'Zhang Xiao Bai',
       photo: 'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png'
     }, {
-      name: '江小白',
+      name: '张小白',
+      name_en: 'Zhang Xiao Bai',
       photo: 'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png'
     }, {
-      name: '江小白',
+      name: '张小白',
+      name_en: 'Zhang Xiao Bai',
       photo: 'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png'
     }, {
-      name: '江小白',
+      name: '张小白',
+      name_en: 'Zhang Xiao Bai',
       photo: 'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png'
     }, {
-      name: '江小白',
+      name: '张小白',
+      name_en: 'Zhang Xiao Bai',
       photo: 'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png'
     }, {
-      name: '江小白',
+      name: '张小白',
+      name_en: 'Zhang Xiao Bai',
       photo: 'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png'
     }],
     works: [
-      'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png',
-      'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png',
-      'https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png',
+      'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+      'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+      'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
     ],
     courses: [{
       title: '松饼',

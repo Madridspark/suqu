@@ -1,7 +1,43 @@
 @import '~@/index.less';
 
-.item {
-  img {
-    width: 500px;
+.list {
+  padding: 20px 0;
+  :global(.el-carousel__arrow) {
+    font-size: 16px;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, .5);
+    top: 227.56px;
+    transform: translateY(-50%) scaleY(2);
+    &:hover {
+      background-color: rgba(0, 0, 0, .7);
+    }
+    &:global(.el-carousel__arrow--left) {
+      left: 0;
+    }
+    &:global(.el-carousel__arrow--right) {
+      right: 0;
+    }
+  }
+
+  :global(.el-carousel__item--card) {
+    width: 33.333333%;
+    .item {
+      text-align: center;
+      img {
+        width: 100%;
+      }
+      .title {
+        font-size: 20px;
+        big, small {
+          display: block;
+          font-size: 1em;
+          letter-spacing: 5px;
+        }
+        small {
+          color: #555;
+          font-weight: lighter;
+        }
+      }
+    }
   }
 }

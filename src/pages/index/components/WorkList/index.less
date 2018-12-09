@@ -1,32 +1,19 @@
 @import '~@/index.less';
 
-ul.list {
-  padding: 0;
-  padding-top: 15px;
-  padding-bottom: 30px;
-  margin: 0;
-  li.item {
-    display: inline-block;
-    list-style: none;
-    width: 25%;
-    box-sizing: border-box;
-    a {
-      background-color: #fff;
-      display: block;
-      text-decoration: none;
-      text-align: center;
-      overflow: hidden;
-      box-shadow: 0 3px 20px rgba(0, 0, 0, .30);
-      transition: all .3s;
+.list {
+  padding: 20px 0;
+  :global(.el-carousel__item--card) {
+    &:global(.is-active) {
+      cursor: unset;
+    }
+    .item {
       img {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        max-width: 100%;
+        width: 100%;
+        height: 100%;
       }
-      &:hover {
-        transform: scale(1.1);
-      }
+      background-color: #fff;
+      border: 1px solid #d1dbe5;
+      box-shadow: 0 3px 20px rgba(0,0,0,.3);
     }
   }
 }
