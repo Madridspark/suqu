@@ -9,21 +9,20 @@ import styles from './index.less';
 const navList = [
   {
     title: '酥趣课程',
-    link: '/',
     children: [
       {
         title: '线上课程',
-        link: ''
+        link: '/online-courses'
       },
       {
         title: '线下课程',
-        link: ''
+        link: '/underline-courses'
       },
     ],
   },
   {
     title: '酥趣名师',
-    link: '/',
+    link: '/teachers',
   },
   {
     title: '酥趣资讯',
@@ -31,57 +30,45 @@ const navList = [
   },
   {
     title: '食谱',
-    link: '/',
+    link: '/books',
   },
   {
     title: '研发中心',
-    link: '/',
     children: [
       {
         title: '产品研发',
-        link: ''
+        link: '/dev-production'
       },
       {
         title: '食谱研发',
-        link: ''
+        link: '/dev-book'
       },
       {
         title: '名师书籍',
-        link: ''
+        link: 'dev-publish'
       },
     ],
   },
   {
     title: '关于我们',
-    link: '/',
+    link: '/about-us',
   },
 ]
 
-const NavItem = ({ title, link, children }) => {
-  const props = {
-    // onMouseEnter: () => {
-
-    // },
-    // onMouseLeave: () => {
-
-    // },
-    className: styles.navItem,
-  }
-  return (
-    <li {...props}>
-      <Link to={link}>{title}</Link>
-      {children && children.length > 0 && (
-        <ul className={styles.subNav}>
-          {children.map(({ title, link }, i) => (
-            <li key={i}>
-              <Link to={link}>{title}</Link>
-            </li>
-          ))}
-        </ul>
-      )}
-    </li>
-  );
-}
+const NavItem = ({ title, link, children }) => (
+  <li className={styles.navItem}>
+    {children ? <a href='javascript:void(0);'>{title}</a> : <NavLink activeClassName={styles.active} to={link}>{title}</NavLink>}
+    {children && children.length > 0 && (
+      <ul className={styles.subNav}>
+        {children.map(({ title, link }, i) => (
+          <li key={i}>
+            <NavLink activeClassName={styles.active} to={link}>{title}</NavLink>
+          </li>
+        ))}
+      </ul>
+    )}
+  </li>
+)
 
 class BasicLayout extends PureComponent {
   componentDidUpdate(prevProps) {

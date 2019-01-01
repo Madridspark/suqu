@@ -34,7 +34,7 @@ header {
           text-decoration: none;
           color: #fff;
           transition: color .3s;
-          &:hover {
+          &.active, &:hover {
             color: rgba(255, 255, 255, .6);
           }
         }
@@ -71,7 +71,7 @@ header {
               transition: color .3s;
               text-decoration: none;
               line-height: 2.5;
-              &:hover {
+              &.active, &:hover {
                 color: #000;
               }
             }
@@ -125,4 +125,8 @@ footer {
     font-size: 20px;
     letter-spacing: .3em;
   }
+}
+
+a.active {
+  font-weight: bold;
 }
