@@ -2,11 +2,8 @@ import React, { PureComponent } from 'react';
 import { Carousel } from 'element-react';
 import { OverPack } from 'rc-scroll-anim';
 import QueueAnim from 'rc-queue-anim';
-import moment from 'moment';
 import styles from './index.less';
 
-const itemHeight = 150;
-const margin = 20;
 
 class WorkList extends PureComponent {
   render() {
@@ -30,7 +27,7 @@ class WorkList extends PureComponent {
             key='uni'
             interval="4000"
             type="card"
-            height={550}
+            height='550px'
             arrow='never'
             indicatorPosition='none'
             autoplay

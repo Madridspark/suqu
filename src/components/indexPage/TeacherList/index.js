@@ -30,7 +30,7 @@ class TeacherList extends PureComponent {
             key='uni'
             interval="4000"
             type="flatcard"
-            height={550}
+            height='550px'
             arrow='always'
             indicatorPosition='none'
             autoplay

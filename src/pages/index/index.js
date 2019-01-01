@@ -1,12 +1,12 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'dva';
 import classNames from 'classnames';
-import Banner from './components/Banner';
-import TeacherList from './components/TeacherList';
-import WorkList from './components/WorkList';
-import CourseList from './components/CourseList';
-import NewsList from './components/NewsList';
-import PartnerList from './components/PartnerList';
+import Banner from '@/components/IndexPage/Banner';
+import TeacherList from '@/components/IndexPage/TeacherList';
+import WorkList from '@/components/IndexPage/WorkList';
+import CourseList from '@/components/IndexPage/CourseList';
+import NewsList from '@/components/IndexPage/NewsList';
+import PartnerList from '@/components/IndexPage/PartnerList';
 import styles from './index.less';
 import 'element-theme-default';
 
