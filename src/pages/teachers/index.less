@@ -1,0 +1,41 @@
+.list {
+  margin: 0;
+  padding: 0;
+  .item {
+    background-color: #f6f6f6;
+    list-style: none;
+    margin: 0;
+    padding: 20px 0;
+    .itemWrap {
+      max-width: 1024px;
+      margin: 0 auto;
+      .image {
+        width: 200px;
+        float: left;
+        img {
+          width: 100%;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, .30);
+        }
+      }
+      .text {
+        overflow: hidden;
+        padding-left: 20px;
+        ul {
+          padding: 0;
+          li {
+            list-style: none;
+            margin: 0;
+          }
+        }
+      }
+    }
+    &:nth-child(2n+0) {
+      background-color: #fff;
+    }
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+}
