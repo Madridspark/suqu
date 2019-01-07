@@ -19,13 +19,13 @@ class Teachers extends PureComponent {
             </h3>
             <div className={styles.resume}>
               <div>履历</div>
-              <ul>{resume.map(x => <li>{x}</li>)}</ul>
+              <ol type='a'>{resume.map(x => <li>{x}</li>)}</ol>
             </div>
             <div className={styles.courses}>
               <div>课程</div>
-              <ul>{courses.map(({ name, link }) => (
+              <ol>{courses.map(({ name, link }) => (
                 <li><Link to={link}>{name}</Link></li>
-              ))}</ul>
+              ))}</ol>
             </div>
           </div>
         </div>
